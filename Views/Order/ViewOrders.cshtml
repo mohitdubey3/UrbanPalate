@@ -1,0 +1,55 @@
+﻿@model IEnumerable<UrbanPalate.Models.Order>
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">My Orders</h1>
+
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Order Date</th>
+                                <th>Total Amount</th>
+                                <th>Order Items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var order in Model)
+                            {
+                                <tr>
+                                    <td><span class="badge bg-secondary">@order.OrderId</span></td>
+                                    <td>@order.OrderDate.ToString("MM/dd/yyyy")</td>
+                                    <td class="fw-bold text-success">@order.TotalAmount.ToString("C")</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            @foreach (var item in order.OrderItems)
+                                            {
+                                                <li class="mb-2">
+                                                    <span class="badge bg-info">@item.Quantity</span>
+                                                    @item.Product.Name - @item.Price.ToString("C")
+                                                </li>
+                                            }
+                                        </ul>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>No Orders</strong> You haven't placed any orders yet.
+                </div>
+            }
+        </div>
+    </div>
+</div>

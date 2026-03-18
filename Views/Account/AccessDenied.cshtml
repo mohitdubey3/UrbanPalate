@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="alert alert-danger" role="alert">
+                <h1 class="display-4">🚫 Access Denied</h1>
+                <p class="lead mt-3">You do not have permission to access this page.</p>
+                <hr>
+                <p class="text-muted mb-3">Only administrators can access this resource.</p>
+                <a href="/" class="btn btn-primary me-2">Go to Home</a>
+                <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .display-4 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+</style>

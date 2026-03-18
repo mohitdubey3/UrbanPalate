@@ -1,0 +1,36 @@
+﻿@model UrbanPalate.ViewModels.LoginViewModel;
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-lg-8 p-3 bg-body-tertiary">
+            <h1 class="p-3 text-center">Login</h1>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="control-label fw-bold"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="control-label fw-bold"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="float-end">
+                    <a >Forgot Password ?</a>
+                </div>
+                <div class="form-check mb-3">
+                    <input asp-for="RememberMe" class="form-check-input" />
+                    <label asp-for="RememberMe" class="fw-bold"></label>
+                </div>
+                <input type="submit" class="btn btn-success mb-2" value="Login" />
+                <p class="text-center mb-3"> Don't have an Account ? <a class="text-center" asp-controller="Login" asp-action="Register" class="text-bg-warning">Goto Register</a></p>
+                <div class="text-center">
+                    <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

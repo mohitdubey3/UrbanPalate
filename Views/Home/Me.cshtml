@@ -1,0 +1,104 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<style>
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 5px solid white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .characteristic-badge {
+        transition: transform 0.2s;
+        cursor: default;
+    }
+
+        .characteristic-badge:hover {
+            transform: translateY(-3px);
+        }
+
+    .social-link {
+        transition: all 0.3s ease;
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #f8f9fa;
+    }
+
+        .social-link:hover {
+            background: #0d6efd;
+            color: white !important;
+        }
+</style>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 align-content-center">
+            <div class="card profile-card p-4 p-md-5">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <img src="https://avatars.githubusercontent.com/u/210300274?v=4" alt="Developer" class="rounded-circle profile-img mb-3">
+                        <h4 class="fw-bold mb-1">Mohit Dubey</h4>
+                        <p class="text-muted small">Full-Stack .Net Developer</p>
+                    </div>
+
+                    <div class="col-md-8">
+                        <h2 class="fw-bold mb-3">Hello, I'm Mohit Dubey.</h2>
+                        <p class="text-secondary leading-relaxed">
+                            I build digital experiences with a focus on clean code and user-centric design. With over 2 years of experience, I specialize in turning complex problems into elegant, functional websites.
+                        </p>
+
+                        <div class="mb-4">
+                            <h6 class="text-uppercase fw-bold text-muted mb-3">Characteristics</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-primary-subtle text-primary characteristic-badge px-3 py-2 border border-primary-subtle ml-3">🚀 Fast Learner</span>
+                                <span class="badge rounded-pill bg-success-subtle text-success characteristic-badge px-3 py-2 border border-success-subtle ml-3">🧠 Problem Solver</span>
+                                <span class="badge rounded-pill bg-info-subtle text-info characteristic-badge px-3 py-2 border border-info-subtle ml-3">🎨 Detail Oriented</span>
+                                <span class="badge rounded-pill bg-warning-subtle text-warning characteristic-badge px-3 py-2 border border-warning-subtle ml-3">🤝 Team Player</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4 opacity-25">
+
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="https://github.com/mohitdubey3/" class="social-link text-dark shadow-sm m-3" title="GitHub">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohitdubey3/" class="social-link text-dark shadow-sm m-3" title="LinkedIn">
+                                <i class="bi bi-linkedin fs-5"></i>
+                            </a>
+                            <a href="https://692414023100b6351975b2dd--comforting-wisp-1efe56.netlify.app/" class="social-link text-dark shadow-sm m-3" title="Portfolio">
+                                <i class="bi bi-globe fs-5"></i>
+                            </a>
+                            <a href="mailto:mohitkdb@gmail.com" class="btn btn-primary rounded-pill px-4 ms-auto fw-medium m-3">
+                                Hire Me
+                            </a>
+                        </div>
+                    </div>
+                    <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

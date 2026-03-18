@@ -1,0 +1,54 @@
+﻿@using UrbanPalate.Models
+@model Ingredient
+@{
+    ViewBag.Title = "Ingredient Details";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10">
+            <h1 class="mb-4">
+                <span class="badge bg-primary">@Model.Name</span>
+                Details
+            </h1>
+
+            @if(Model.ProductIngredients != null && Model.ProductIngredients.Any())
+            {
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Products</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var productIngredient in Model.ProductIngredients)
+                                {
+                                    <tr>
+                                        <td>@productIngredient.Product.Name</td>
+                                        <td>@productIngredient.Product.Description</td>
+                                        <td class="fw-bold">@productIngredient.Product.Price.ToString("C")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">No products contain this ingredient.</div>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            }
+        </div>
+    </div>
+</div>

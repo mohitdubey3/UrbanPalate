@@ -1,0 +1,255 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container my-5">
+    <section class="hero-card shadow-lg py-5 mb-5">
+        <h1 class="display-3 fw-bold text-white">Welcome to Urbon Restaurant</h1>
+        <p class="lead text-white text-center">Fresh, delicious meals served with love. Cozy ambience. Book a table or explore our menu.</p>
+        <div class="d-flex justify-content-center gap-2 mt-4">
+            <a class="btn btn-light text-dark rounded-pill px-4 py-2 fw-bold" asp-area="" asp-controller="Home" asp-action="Contact">Book a Table</a>
+            <a class="btn btn-light text-dark rounded-pill px-4 py-2 fw-bold" asp-area="" asp-controller="Product" asp-action="Index">See Menu</a>
+        </div>
+    </section>
+</div>
+
+<div class="container">
+    <div class="hero-card shadow-lg">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-3 fw-bold mb-3">Delicious Food,<br>Delivered Fast.</h1>
+                <p class="fs-5 mb-4 opacity-75">Experience the taste of premium meals delivered hot and fresh to your doorstep within minutes.</p>
+                <a class="btn btn-light text-dark rounded-pill px-4 py-2 fw-bold" asp-controller="Order" asp-action="Create">Order Now &rarr;</a>
+            </div>
+            <div class="col-md-6 text-center position-relative">
+                <div class="hero-img-container">
+                    <img src="https://wallpapers.com/images/hd/traditional-thali-platter-indian-food-7ppdmw8bs4n1f36j.jpg" class="rounded-circle img-fluid shadow" alt="Foods">
+                </div>
+                <span class="badge bg-white text-danger position-absolute top-0 end-0 rounded-pill p-2"><i class="fa fa-fire"></i> Hot</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container my-5">
+    <h4 class="fw-bold mb-4"><i class="fa fa-utensils text-muted me-2"></i> Inspiration for Your <span class="text-warning">First Order</span></h4>
+    <div class="row g-4">
+        <div class="col-md-2 col-6 position-relative">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.49QLJX5hiayymjfHobf_tgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="category-img shadow-sm" alt="Snacks">
+            <span class="cat-label">Snacks</span>
+        </div>
+        <div class="col-md-2 col-6 position-relative">
+            <img src="https://img.freepik.com/premium-photo/indian-lunch-dinner-main-course-food-group-includes-paneer-butter-masala-dal-makhani-palak-paneer-roti-rice-etc-selective-focus_466689-6858.jpg?w=2000" class="category-img shadow-sm" alt="Main Course">
+            <span class="cat-label">Main Course</span>
+        </div>
+        <div class="col-md-2 col-6 position-relative">
+            <img src="https://cdn.loveandlemons.com/wp-content/uploads/2021/06/summer-desserts-1.jpg" class="category-img shadow-sm" alt="Desserts">
+            <span class="cat-label">Desserts</span>
+        </div>
+        <div class="col-md-2 col-6 position-relative">
+            <img src="https://img.freepik.com/premium-photo/closeup-slice-pepperoni-pizza-with-melted-cheese-stretching_198067-245797.jpg?w=2000" class="category-img shadow-sm" alt="Pizza">
+            <span class="cat-label">Pizza</span>
+        </div>
+        <div class="col-md-2 col-6 position-relative">
+            <img src="https://www.thespruceeats.com/thmb/DXZoAJoKTPS7BKEyk4H-Gw3puhc=/6016x4016/filters:fill(auto,1)/steamed-momos-wontons-1957616-hero-01-1c59e22bad0347daa8f0dfe12894bc3c.jpg" class="category-img shadow-sm" alt="Burgers">
+            <span class="cat-label">Momos</span>
+        </div>
+        <div class="col-md-2 col-6 position-relative">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.xAxz2Ecb2EO2138VPcqiKQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="category-img shadow-sm" alt="Burgers">
+            <span class="cat-label">Burgers</span>
+        </div>
+    </div>
+</section>
+
+<section class="py-4">
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <i class="bi bi-basket2-fill fs-1 text-dark"></i>
+            <h4 class="mt-2">Fresh Ingredients</h4>
+            <p class="text-muted">Locally sourced and seasonally inspired.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="bi bi-clock-fill fs-1 text-dark"></i>
+            <h4 class="mt-2">Fast Service</h4>
+            <p class="text-muted">Prompt, friendly, and attentive staff.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="bi bi-star-fill fs-1 text-dark"></i>
+            <h4 class="mt-2">Top Rated</h4>
+            <p class="text-muted">Loved by our customers for taste and service.</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <h2 class="mb-4 text-center text-bg-warning">Our Menu</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.YMUBgbQa3yM-XWiBe7fYtQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-100 menu-card-img" alt="Paneer Tikka">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Paneer Tikka</h5>
+                    <p class="card-text text-muted">Grilled cheese with spices.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹190</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://www.mob.co.uk/cdn-cgi/image/width=3840,quality=75,format=auto/https://files.mob-cdn.co.uk/recipes/2023/01/Vegetarian-Samosas.jpg" class="w-100 menu-card-img" alt="Vegetable Samosa">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Vegetable Samosa</h5>
+                    <p class="card-text text-muted">Two crispy pastry triangles stuffed with spiced potatoes and green peas. Served with tamarind chutney.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹15 / 1ps</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://lakegenevacountrymeats.com/wp-content/uploads/Fried-Chicken-Pieces.jpg" class="w-100 menu-card-img" alt="Chicken">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Chicken</h5>
+                    <p class="card-text text-muted">A spicy, deep-fried chicken dish from South India, tempered with curry leaves and green chilies.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹150</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4 mt-3">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://i.ytimg.com/vi/DCP9vTavk-8/maxresdefault.jpg" class="w-100 menu-card-img" alt="Pakoda">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Pakoda</h5>
+                    <p class="card-text text-muted">Crispy & Comforting.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹50</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.3b-I01J1PZYH8fZy4mI0YwHaGQ?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-100 menu-card-img" alt="Chole">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Chole</h5>
+                    <p class="card-text text-muted">High Protein & Rich.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹40</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://th.bing.com/th/id/R.b97ab45e8eaa5849cb524d3fe6b88fbb?rik=A9Pr85bonTGv%2bw&riu=http%3a%2f%2frecipes.timesofindia.com%2fphoto%2f53099699.cms%3fimgsize%3d214281&ehk=9XJM%2bQo2u4jFuFfgJq5EHfDR%2fZ%2fhWys58%2fG%2fN8Md%2bDc%3d&risl=&pid=ImgRaw&r=0" class="w-100 menu-card-img" alt="Jalebi">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Jalebi</h5>
+                    <p class="card-text text-muted">Instant Happiness.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹50</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4 mt-3">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://www.daringgourmet.com/wp-content/uploads/2023/06/Dosa-Recipe-3.jpg" class="w-100 menu-card-img" alt="Dosa">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Dosa</h5>
+                    <p class="card-text text-muted">Probiotic & Light.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹100</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://www.thespruceeats.com/thmb/6j6Ne_4F62_uigRCvTZYVykcHhc=/2122x1415/filters:fill(auto,1)/idli-56a510b63df78cf772862c34.jpg" class="w-100 menu-card-img" alt="Idli">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Idli</h5>
+                    <p class="card-text text-muted">Easy Digestion.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹80</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="overflow-hidden">
+                    <img src="https://holycowvegan.net/wp-content/uploads/2020/04/stuffed-kulcha-recipe.jpg" class="w-100 menu-card-img" alt="Kulcha">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Kulcha</h5>
+                    <p class="card-text text-muted">comfort champion.</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">₹160</span>
+                    <a class="btn btn-sm btn-outline-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <h2 class="mb-4 text-center text-bg-warning">Our Chefs</h2>
+    <div class="row g-4">
+        <div class="col-md-4 text-center">
+            <img src="https://img.freepik.com/premium-photo/photo-smiling-indian-chef-white-uniform-isolated-white-background-copy-space_1031351-33.jpg" class="img-fluid mb-3 rounded-circle " alt="Chef 1" style="width:140px;height:140px;object-fit:cover;">
+            <h5>Anuj Sahu</h5>
+            <p class="text-muted">Master Chef</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="https://thumbs.dreamstime.com/b/chef-kitchen-professional-chef-man-uniform-kitchen-bearded-chef-cook-baker-male-chef-over-kitchen-background-handsome-272615630.jpg" class="img-fluid mb-3 rounded-circle " alt="Chef 1" style="width:140px;height:140px;object-fit:cover;">
+            <h5>Mohit Sharma</h5>
+            <p class="text-muted">Master Chef</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="https://ik.imagekit.io/j83rchiauw/seo_popular_master/202306091632_GHikaZz7Gzi8kWlC.jpg" class="img-fluid mb-3 rounded-circle " alt="Chef 3" style="width:140px;height:140px;object-fit:cover;">
+            <h5>Ankit Raj</h5>
+            <p class="text-muted">Cook</p>
+        </div>
+    </div>
+</section>
+
+<section class="text-center hero-card w-auto">
+    <div class="p-4 rounded-3 bg-opacity-50">
+        <h3 class="mb-3">Reserve Your Table</h3>
+        <p class="text-muted mb-3">Call us or book online for a guaranteed spot.</p>
+        <a class="btn btn-outline-dark btn-lg" asp-area="" asp-controller="Home" asp-action="Contact">Contact & Reservation</a>
+    </div>
+</section>

@@ -1,0 +1,89 @@
+﻿@using UrbanPalate.Models
+@model Product
+
+@{
+    ViewBag.Title = $"{ViewBag.Operation} Menu Item";
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+            <h1 class="mb-4">@ViewBag.Operation Menu Item</h1>
+
+            <form asp-action="AddEdit" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="ProductId" />
+                <input type="hidden" asp-for="CategoryId" />
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Price" class="form-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Stock" class="form-label">Quantity In Stock</label>
+                        <input asp-for="Stock" class="form-control" />
+                        <span asp-validation-for="Stock" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" asp-for="ImageFile" />
+                </div>
+
+                <hr class="my-4">
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <h5>Category</h5>
+                        @foreach (Category category in ViewBag.Categories)
+                        {
+                            <div class="form-check">
+                                @{
+                                    bool isChecked = Model.CategoryId == category.CategoryId;
+                                }
+                                <input type="radio" class="form-check-input" id="cat-@category.CategoryId" name="catId" value="@category.CategoryId" @(isChecked ? "checked" : "") />
+                                <label class="form-check-label" for="cat-@category.CategoryId">@category.Name</label>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <h5>Ingredients</h5>
+                        @foreach (Ingredient ingredient in ViewBag.Ingredients)
+                        {
+                            <div class="form-check">
+                                @{
+                                    bool isChecked = Model.ProductIngredients != null && Model.ProductIngredients.Any(i => i.IngredientId == ingredient.IngredientId);
+                                }
+                                <input type="checkbox" class="form-check-input" id="ing-@ingredient.IngredientId" name="ingredientIds" value="@ingredient.IngredientId"
+                                       @(isChecked ? "checked" : "") />
+                                <label class="form-check-label" for="ing-@ingredient.IngredientId">@ingredient.Name</label>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-top">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a asp-action="Index" asp-controller="Product" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

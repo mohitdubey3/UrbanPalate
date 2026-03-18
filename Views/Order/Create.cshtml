@@ -1,0 +1,35 @@
+﻿@using UrbanPalate.Models
+@model OrderViewModel
+
+@{
+        ViewBag.Title = "Create Order";
+}
+
+<h1 class="mb-4 text-center bg-warning">Create Order</h1>
+
+<div class="row">
+    @foreach (Product product in @Model.Products)
+    {
+        <div class="col-md-6 mb-4">
+            <form asp-action="AddItem" method="post">
+                <div class="card shadow-sm rounded" style="width: 33rem;">
+                    <img src="@Url.Content("~/images/" + product?.ImageUrl)"
+                         class="card-img-top rounded-top"
+                         style="height: 350px; object-fit: cover;"
+                         alt="@product.Description" />
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-muted">@product.Price.ToString("C")</p>
+
+                        <input type="hidden" value="@product.ProductId" name="prodId" />
+                        <input type="number" name="prodQty" class="form-control mb-2"
+                               placeholder="Enter quantity" min="1" />
+
+                        <button class="btn btn-success w-100" type="submit">Add to Cart</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    }
+</div>

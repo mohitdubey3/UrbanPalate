@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UrbanPalate</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/Up.favicon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/UrbanPalate.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-toggleable-md bg-white border-bottom box-shadow mb-3 py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-warning fs-3" asp-area="" asp-controller="Home" asp-action="Index">Urban<span class="text-dark">Palate</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item underline">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item underline">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                        <li class="nav-item underline">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Menues</a>
+                        </li>
+                        <li class="nav-item underline">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ingredient" asp-action="Index">Ingredients</a>
+                        </li>
+                        <li class="nav-item underline">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Create">Order</a>
+                        </li>
+                        <li class="nav-item underline">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Me">About👦</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <form class="container-fluid justify-content-start">
+                            <partial name="_LoginPartial" />
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <a href="#" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4" id="btn-back-to-top" style="z-index: 1050;">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="text-warning fw-bold mb-3">QuickEats</h4>
+                    <p class="small">Fast, fresh, and reliable food delivery right at your doorstep. Delicious meals from your favorite restaurants.</p>
+                    <p class="small">We belive dining is more than just food, It`s an experience. Our warm ambiance,elegant interiors, and attentive service create the perfect setting for family gatherings.</p>
+                    <p class="text-success small"><i class="fa fa-leaf"></i> Fresh & Quality Ingredients</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <a asp-controller="Home" asp-action="Index" class="footer-link">Home</a>
+                    <a asp-controller="Product" asp-action="Index" class="footer-link">Menues</a>
+                    <a asp-controller="Ingredient" asp-action="Index" class="footer-link">Ingredients</a>
+                    <a asp-controller="Order" asp-action="Create" class="footer-link">Order</a>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Customer Support</h5>
+                    <a href="tel:+918228002" class="footer-link text-white">Help Center Call <i class="bi bi-telephone ms-2"></i></a>
+                    <a asp-controller="Home" asp-action="Contact"class="footer-link">Contact Us</a>
+                    <a asp-action="Cart" asp-controller="Order" class="footer-link">🛒 Cart</a>
+                    <a asp-action="ViewOrders" asp-controller="Order" class="footer-link">Order History</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Get in Touch</h5>
+                    <p class="small mb-1"><i class="fa fa-location-dot me-2"></i> New Ashok Nagar ,Near Metro Pillar No 158, Delhi, 110096</p>
+                    <p class="small mb-1"><i class="fa fa-phone me-2"></i> +91-8228000060</p>
+                    <p class="small mb-1"><i class="fa fa-envelope me-2"></i> support@urbanpalate.com</p>
+                    <p class="small mb-1"><i class="fa fa-clock me-2"></i> Monday - Sunday: 9:00 AM - 10:30 PM</p>
+                    <a href="mailto:mohitkdb@gmail.com" class="text-white ms-2 footer-link">Complain</a>
+                </div>
+            </div>
+            <hr class="border-secondary mt-5">
+            <div class="d-flex justify-content-between small">
+                <p>© 2026 <a class="text-white" asp-area="" asp-controller="Home" asp-action="Index">UrbanPalate</a>. All rights reserved.</p>
+                <p>Made with ❤️ by <a class="text-decoration-none text-light" asp-controller="Home" asp-action="Me">Mohit Dubey</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
