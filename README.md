@@ -31,3 +31,6 @@ The system uses a relational schema where:
 2. Configure your SQL Server string in `appsettings.json`.
 3. Run `dotnet ef database update` in the terminal.
 4. Launch the app using `dotnet run`.
+
+
+![Screenshot_24-3-2026_125844_localhost](https://github.com/user-attachments/assets/2aa1009d-72aa-4c51-bef2-0d61a4d3ac00)
